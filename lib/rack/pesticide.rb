@@ -15,12 +15,13 @@ module Rack
     private
 
     def forbidden
-      [403, {"Content-Type" => "text/plain"}, ["Semalt, be gone!\n"]]
+      [403, {"Content-Type" => "text/plain"}, ["Pest, be gone!\n"]]
     end
 
     def pest?(env)
+      pests = [/semalt\.com\/crawler\.php/]
       referer = env['HTTP_REFERER'] || ''
-      referer =~ /semalt\.com\/crawler\.php/
+      pests.map { |p| referer =~ p }.any?
     end
   end
 end
