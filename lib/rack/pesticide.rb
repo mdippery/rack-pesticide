@@ -19,7 +19,11 @@ module Rack
     end
 
     def pest?(env)
-      pests = [/semalt\.com\/crawler\.php/]
+      pests = [
+        /semalt\.com\/crawler\.php/,
+        /buttons-for-website\.com/,
+        /makemoneyonline\.com/
+      ]
       referer = env['HTTP_REFERER'] || ''
       pests.map { |p| referer =~ p }.any?
     end
