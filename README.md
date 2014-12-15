@@ -1,14 +1,13 @@
-# Rack Block Semalt
+# Rack Pesticide
 
-The semalt.com crawler is a bit shady and, if nothing else, pollutes your logs
-with hits and doesn't respect robots.txt. This gem makes it simple to block
-semalt.com's crawler.
+Rack Pesticide blocks annoying and shady crawlers and websites that pollute
+your logs with their HTTP referrer information.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'rack-block-semalt'
+    gem 'rack-pesticide'
 
 And then execute:
 
@@ -16,18 +15,18 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rack-block-semalt
+    $ gem install rack-pesticide
 
 ## Usage
 
 Simply add these two lines of code to your `config.ru` file:
 
-    require 'rack-block-semalt'
-    use Rack::BlockSemalt
+    require 'rack-pesticide'
+    use Rack::Pesticide
 
 ## Contributing
 
-1. [Fork it](http://github.com/<my-github-username>/rack-block-semalt/fork)
+1. [Fork it](http://github.com/mdippery/rack-pesticide/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

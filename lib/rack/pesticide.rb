@@ -1,11 +1,11 @@
 module Rack
-  class BlockSemalt
+  class Pesticide
     def initialize(app)
       @app = app
     end
 
     def call(env)
-      if semalt?(env)
+      if pest?(env)
         forbidden
       else
         @app.call(env)
@@ -18,7 +18,7 @@ module Rack
       [403, {"Content-Type" => "text/plain"}, ["Semalt, be gone!\n"]]
     end
 
-    def semalt?(env)
+    def pest?(env)
       referer = env['HTTP_REFERER'] || ''
       referer =~ /semalt\.com\/crawler\.php/
     end
