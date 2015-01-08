@@ -7,15 +7,11 @@ your logs with their HTTP referrer information.
 
 Add this line to your application's Gemfile:
 
-    gem 'rack-pesticide'
+    gem 'rack-pesticide', :git => 'https://github.com/mdippery/rack-pesticide.git'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install rack-pesticide
 
 ## Usage
 
