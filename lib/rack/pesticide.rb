@@ -15,7 +15,7 @@ module Rack
     private
 
     def forbidden
-      [403, {"Content-Type" => "text/plain"}, ["Pest, be gone!\n"]]
+      [403, {"Content-Type" => "text/plain"}, ["Pest, be gone!\r\n"]]
     end
 
     def pest?(env)
