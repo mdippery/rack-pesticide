@@ -22,7 +22,9 @@ module Rack
       pests = [
         /semalt\.com\/crawler\.php/,
         /buttons-for-website\.com/,
-        /makemoneyonline\.com/
+        /makemoneyonline\.com/,
+        /buttons-for-your-website\.com/,
+        /best-seo-offer\.com/,
       ]
       referer = env['HTTP_REFERER'] || ''
       pests.map { |p| referer =~ p }.any?
