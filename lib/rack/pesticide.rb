@@ -25,6 +25,7 @@ module Rack
         /makemoneyonline\.com/,
         /buttons-for-your-website\.com/,
         /best-seo-offer\.com/,
+        /100dollars-seo\.com/,
       ]
       referer = env['HTTP_REFERER'] || ''
       pests.map { |p| referer =~ p }.any?
