@@ -42,5 +42,10 @@ describe "rack-pesticide" do
       env = {'HTTP_REFERER' => '100dollars-seo.com/try.php?u=http://monkey-robot.com'}
       app.send(:pest?, env).should be true
     end
+
+    it "should block videos-for-your-business.com" do
+      env = {'HTTP_REFERER' => 'videos-for-your-business.com/'}
+      app.send(:pest?, env).should be true
+    end
   end
 end
