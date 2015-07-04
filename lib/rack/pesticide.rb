@@ -21,6 +21,7 @@ module Rack
     def pest?(env)
       pests = [
         /semalt\.com\/crawler\.php/,
+        /semaltmedia\.com/,
         /buttons-for-website\.com/,
         /makemoneyonline\.com/,
         /buttons-for-your-website\.com/,
