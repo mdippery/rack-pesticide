@@ -52,5 +52,10 @@ describe "rack-pesticide" do
       env = {'HTTP_REFERER' => 'http://semaltmedia.com/'}
       app.send(:pest?, env).should be true
     end
+
+    it "should block video--production.com" do
+      env = {'HTTP_REFERER' => 'http://video--production.com/'}
+      app.send(:pest?, env).should be true
+    end
   end
 end
