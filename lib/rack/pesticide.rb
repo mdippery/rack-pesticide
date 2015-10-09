@@ -29,6 +29,7 @@ module Rack
         /100dollars-seo\.com/,
         /videos-for-your-business\.com/,
         /video--production\.com/,
+        /justprofit\.xyz/,
       ]
       referer = env['HTTP_REFERER'] || ''
       pests.map { |p| referer =~ p }.any?

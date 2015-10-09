@@ -57,5 +57,10 @@ describe "rack-pesticide" do
       env = {'HTTP_REFERER' => 'http://video--production.com/'}
       expect(app.send(:pest?, env)).to be true
     end
+
+    it "should block justprofit.xyz" do
+      env = {'HTTP_REFERER' => 'http://justprofit.xyz/'}
+      expect(app.send(:pest?, env)).to be true
+    end
   end
 end
