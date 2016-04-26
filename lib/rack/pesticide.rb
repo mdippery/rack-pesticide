@@ -31,6 +31,7 @@ module Rack
         /video--production\.com/,
         /justprofit\.xyz/,
         /phatvidz\.com/,
+        /free-video-tool\.com/,
       ]
       referer = env['HTTP_REFERER'] || ''
       pests.map { |p| referer =~ p }.any?
