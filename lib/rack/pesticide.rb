@@ -19,22 +19,19 @@ module Rack
     end
 
     def pest?(env)
-      pests = [
-        /semalt\.com\/crawler\.php/,
-        /semaltmedia\.com/,
-        /buttons-for-website\.com/,
-        /makemoneyonline\.com/,
-        /buttons-for-your-website\.com/,
-        /best-seo-offer\.com/,
-        /100dollars-seo\.com/,
-        /videos-for-your-business\.com/,
-        /video--production\.com/,
-        /justprofit\.xyz/,
-        /phatvidz\.com/,
-        /free-video-tool\.com/,
-      ]
       referer = env['HTTP_REFERER'] || ''
       pests.map { |p| referer =~ p }.any?
+    end
+
+    def pests
+      @pests ||= load_pests
+    end
+
+    def load_pests
+      path = File.expand_path('../../../data/pests.txt', __FILE__)
+      File.open(path, 'r') do |fh|
+        fh.each_line.map { |line| /#{line.chomp}/ }
+      end
     end
   end
 end
