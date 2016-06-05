@@ -28,8 +28,8 @@ module Rack
     end
 
     def load_pests
-      path = File.expand_path('../../../data/pests.txt', __FILE__)
-      File.open(path, 'r') do |fh|
+      path = ::File.expand_path('../../../data/pests.txt', __FILE__)
+      ::File.open(path, 'r') do |fh|
         fh.each_line.map { |line| /#{line.chomp}/ }
       end
     end
