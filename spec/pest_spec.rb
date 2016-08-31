@@ -73,5 +73,10 @@ describe "rack-pesticide" do
       env = {'HTTP_REFERER' => 'https://free-video-tool.com/'}
       expect(app.send(:pest?, env)).to be true
     end
+
+    it "should block 1-free-share-buttons.com" do
+      env = {'HTTP_REFERER' => '1-free-share-buttons.com/'}
+      expect(app.send(:pest?, env)).to be true
+    end
   end
 end
