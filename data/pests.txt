@@ -29,7 +29,7 @@ selectcontractsltd\.com
 semalt\.com\/crawler\.php
 semaltmedia\.com
 theresablog\.online
-tobeyleigh\.top
+(www\.)?tobeyleigh\.top
 video--production\.com
 videos-for-your-business\.com
 w-txt\.com
